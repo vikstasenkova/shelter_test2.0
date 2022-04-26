@@ -1,0 +1,25 @@
+@mixin flex ($align: center, $justify: center, $direction: row){
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+}
+@mixin text ($family: $arial, $size: 15px, $color: $color_dark, $line: 24px){
+    font-family: $family;
+    font-size: $size;
+    color: $color;
+    line-height: $line;
+}
+@mixin button ($width, $height, $background, $radius:100px) {
+    width: $width;
+    height: $height;
+    background-color: $background;
+    border-radius: $radius;
+}
+
+@mixin media-tablet {
+    @media (max-width: $laptop_width) {@content; }
+}
+@mixin media-mobile {
+    @media (max-width: $tablet_width) {@content; }
+}

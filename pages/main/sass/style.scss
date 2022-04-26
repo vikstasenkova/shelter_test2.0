@@ -1,0 +1,69 @@
+*{padding:0;margin:0;border:0;}
+*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+:focus,:active{outline:none;}
+a:focus,a:active{outline:none;}
+nav,footer,header,aside{display:block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display:none;}
+button{cursor:pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a, a:visited{text-decoration:none;}
+a:hover{text-decoration:none;}
+ul, li{list-style: none;}
+img{vertical-align:top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
+
+// ABSTRACT
+@import "abstract/constants";
+@import "abstract/mixins";
+@import "abstract/placeholders";
+
+// LAYOUTS
+@import "layouts/header";
+@import "layouts/not-only";
+@import "layouts/about";
+@import "layouts/our-friend";
+@import "layouts/help";
+@import "layouts/addition";
+@import "layouts/footer";
+
+// BASE 
+@import "../../main/sass/base/hamburger";
+
+
+
+
+
+h2{
+    @include text ($georgia, 44px,#FFFFFF, 130%);
+    @include media-mobile{
+        font-size: 25px;
+        line-height: 32.5px;
+        text-align: center;
+        letter-spacing: 0.09rem;
+    }
+}
+
+h3{
+    @include text ($georgia, 35px,$color_54, 130%);
+    @include media-mobile{
+        font-size: 25px;
+        line-height: 32.5px;
+        text-align: center;
+    }
+}
+
+
+.container{
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 80px 20px 100px 20px;
+    @include media-tablet{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    @include media-mobile{
+        padding: 42px 10px 0 10px;
+   }
+}

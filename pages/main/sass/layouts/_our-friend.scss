@@ -1,0 +1,99 @@
+.our-friends{
+    background-color: $color_grey_bac;
+    .container{
+        padding-bottom: 20px;
+        @include flex($direction:column);
+            h3{
+                text-align: center; margin-bottom: 60px; letter-spacing: 0.06em;
+                @include media-mobile{
+                    margin-bottom: 42px;
+                }
+            }
+    }            
+}
+.our-center{
+    @include flex($justify:space-between);
+    width: 100%;
+    @include media-mobile{
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 80px;
+        row-gap: 20px;
+    }
+        .our-button{
+            @include button(52px, 52px, $background:transparent);
+            border: 2px solid $color_primary;
+            font-size: 20px;
+                &:hover{
+                    @extend %transition;
+                    background-color: $color_primary_light;
+                }
+        }
+}
+.our-pets-items{
+    width: 100%;
+    max-width: 990px;
+    @include flex($justify: space-between);
+    @include media-tablet{
+        justify-content: center;
+        column-gap: 40px;
+    }        
+    @include media-mobile{
+        order: -1;
+        width: 100%;
+    }
+}
+.our-pets-item{
+    width: 270px;
+    height: 435px;
+    border-radius: 9px;
+    @include flex($direction:column);
+    background-color: #FAFAFA;
+        span{
+            @include text($family: $georgia, $size: 20px, $color: $color_54, $line: 22.72px);
+            margin: 30px 0 30px 0;
+            letter-spacing: 0.06rem;
+        }
+        button{
+            @include button(187px, 52px, $background:transparent);
+            border: 2px solid $color_primary;
+            margin-bottom: 30px;
+            @include text($family: $georgia, $size: 17px, $color: $color_brown, $line: 22.1px);
+            letter-spacing: 0.06rem;
+        }
+    &:hover{
+        box-shadow: 0px 2px 35px 14px rgba(13,13, 13, 0.04);
+        cursor: pointer;
+        @extend %transition;
+    }    
+}
+.pets-item2{
+    @include media-mobile{
+        display: none;
+    }
+}
+.pets-item3{
+    @include media-tablet{
+        display: none;    
+}    
+}
+.our-button{
+    @include button(261px, 52px, $background:$color_primary);
+    margin: 60px 0 80px 0;
+    @include text($georgia, 17px, $color_brown, 22.1px);
+    letter-spacing: 0.06rem;
+    @include media-mobile{
+        margin: 42px 0 22px 0;
+    }
+    &:hover{
+        @extend %transition;
+        background-color: $color_primary_light;
+    }
+        a {color: $color_brown;}
+}
+.our-arrow-button{
+    margin: 0px;
+    @include media-tablet{
+        min-width: 52px;    
+    }
+}

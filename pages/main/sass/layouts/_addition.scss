@@ -1,0 +1,92 @@
+.addition{
+    background-color: $color_grey_bac;
+    .container{
+        padding-bottom: 100px;
+        padding-top: 0px;
+        @include media-mobile{
+            padding-bottom: 44px;
+        }     
+    }
+}
+.content{
+    margin: 0 auto;
+    width: 915px;
+    padding-top: 80px;
+    @include flex($justify: space-between);
+    @include media-tablet{
+        flex-direction: column-reverse;
+        width: auto;
+    }
+    @include media-mobile{
+        padding-top: 42px;
+    }  
+}
+.addition-rigth{
+    width: 380px;
+    @include flex($align:left, $direction:column);
+    @include media-mobile{
+        align-items: center;
+        width: auto;
+    }
+        h3{
+            width: 300px;
+            text-align: left;
+            margin-bottom: 20px;
+            letter-spacing: 0.13rem;
+            @include media-mobile{
+                text-align: center;
+                margin-bottom: 23px;
+            }
+        }
+        span{
+            @include text($georgia, 15px, $color_brown, 16.5px);
+            letter-spacing: 0.06rem;
+            @include media-mobile{
+                letter-spacing: normal;
+            }
+        }
+        p{
+            @include text($arial, 12px, #B2B2B2, 18px);
+            @include media-mobile{
+                text-align: justify;
+                margin: 0 7px 0 7px;
+                max-width: 400px;
+            }
+        }
+}
+.addition-block{
+    margin: 20px 0 20px 0;
+    @include flex();
+    background-color: $color_primary;
+    border-radius: 9px;
+    width: 349px;
+    height: 43px;
+    @include media-mobile{
+        width: 281px;
+        margin: 24px 0 18px 0;
+    }
+        a{
+            @include text($georgia, 20px, $color_brown, 23px);
+            letter-spacing: 0.08rem;
+            padding-left: 12px;
+            @include media-mobile{
+                font-size: 15px;
+            }
+        }
+        &:hover{
+            @extend %transition;
+            background-color: $color_primary_light;
+        }
+}
+.addition-left{
+    @include media-tablet{
+        margin-top: 60px;
+    }
+    @include media-mobile{
+        width: calc(100% - 40px);
+        margin-top: 42px;
+    }  
+}
+.addition-img{
+    width: 100%;
+}

@@ -1,0 +1,72 @@
+.bagcol{
+    background: linear-gradient(135deg, #5B483A 0%, #262425 50%, #211F20 100%);
+    position: absolute;
+    height: 908px;
+    width: 100%;
+    z-index: -1;
+    top: 0;
+    @include media-tablet{
+        height:1165px;
+    }
+    @include media-mobile{
+        height: 823px;
+    }
+}
+.not-only{
+    .container{
+        @include flex($justify: space-between);
+        padding-top: 60px;
+        padding-bottom: 0;
+        @include media-tablet{
+            flex-direction: column
+        }
+    }
+        p{
+            @include text();
+            margin-top: 42px;
+            letter-spacing: 0.012rem;
+            @include media-mobile{
+                text-align: center;
+            }
+        }
+        button{
+            @include button(207px, 52px, $color_primary);
+            @include text($family: $georgia, $size: 17px, $color: $color_brown, $line: 22.1px);
+            margin-top: 42px;
+            &:hover{
+                @extend %transition;
+                background-color: $color_primary_light;
+            }
+            @include media-tablet{
+                margin-left: 126px;
+            }
+            @include media-mobile{
+                margin-left: 46.5px;
+            }
+        }
+}
+.not-left{
+    margin-bottom: 80px;
+    width: 460px;
+        h2{max-width: 310px;}
+    @include media-mobile{
+        width: 300px;
+    }
+}
+.not-right{
+    @include media-tablet{
+        align-self: flex-end;
+        margin-top: 20px;
+    }
+    @include media-mobile{
+        margin-top: 25px;
+    }
+}
+.not-img{
+    @include media-tablet{
+    width: 569px;
+    }
+    @include media-mobile{
+        width: 260px;
+    }
+}
